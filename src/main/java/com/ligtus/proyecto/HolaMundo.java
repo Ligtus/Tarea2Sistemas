@@ -26,6 +26,6 @@ public class HolaMundo {
 
    @GetMapping("/alternarcaps/{word}")
     public String alternarcaps(@PathVariable String word) {
-        return Datos.alternateCaps(word);
+        return Functions.alternateCaps(word);
     }
 }
