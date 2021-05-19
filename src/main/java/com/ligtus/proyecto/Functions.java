@@ -1,7 +1,7 @@
 package com.ligtus.proyecto;
 
 public class Functions{
-    public String countLetters(String word){
+    public static String countLetters(String word){
         int lower=0, upper=0;
 
         for (int i = 0; i < word.length(); i++) {

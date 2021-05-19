@@ -19,6 +19,6 @@ public class HolaMundo {
 
    @RequestMapping("/contar")
    public String contar(@RequestParam String word){
-       return Functions.contar(word);
+       return Functions.countLetters(word);
    }
 }
