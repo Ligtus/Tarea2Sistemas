@@ -7,7 +7,7 @@ public class Functions{
         for (int i = 0; i < word.length(); i++) {
             if (Character.isUpperCase(word.charAt(i))) {
                 upper++;
-            } else if (Character.isLowerCase(word.charAt(i)){
+            } else if (Character.isLowerCase(word.charAt(i))){
                 lower++;
             }
         }
