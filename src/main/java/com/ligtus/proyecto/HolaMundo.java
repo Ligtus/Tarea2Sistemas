@@ -2,6 +2,7 @@ package com.ligtus.proyecto;
  
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.ligtus.proyecto.Functions;
  
 @RestController
 public class HolaMundo {
@@ -13,5 +14,10 @@ public class HolaMundo {
    @RequestMapping("/despidete")
    public String despidete(){
        return "Adios amigo";
+   }
+
+   @RequestMapping("/contar")
+   public String contar(@RequestParam String word){
+       return Function.contar(word);
    }
 }
