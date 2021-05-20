@@ -6,9 +6,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.ligtus.proyecto.Functions;
+import java.util.Map;
+
  
 @RestController
 public class HolaMundo {
+    
+    @Autowired
+    PersonasBDService personasBDservice;
+
    @RequestMapping("/")
    public String saludar(){
        return "Esta es tu primera página web backend";
@@ -27,5 +33,20 @@ public class HolaMundo {
    @GetMapping("/{word}")
     public String alternarcaps(@PathVariable String word) {
         return Functions.alternateCaps(word);
+    }
+
+    @GetMapping("/guarda")
+    public String insertarPersona(@RequestMapping Map<String, String> datos){
+        System.out.println(datos.get("nombre") + " " + datos.get("apellidos") + " " + datos.get("edad"));
+        Personas persona = new Personas();
+        persona.setNombre(datos.get("nombre"));
+        persona.setApellidos(datos.get("apellidos"));
+        persona.setEdad(Integer.parseInt(datos.get("edad")));
+        personasBDservice.insertarPersona(persona);
+    }
+
+    @GetMapping("/listar")
+    public String mostrarPersonas(){
+        return personasBDservice.getPersonas().toString();
     }
 }
