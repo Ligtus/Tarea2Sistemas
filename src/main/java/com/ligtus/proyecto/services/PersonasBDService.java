@@ -11,13 +11,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class PersonasBDService {
     @Autowired
-    personasRepository personasRepository;
+    PersonasRepository personasRepository;
 
-    public ArrayList<personas> getPersonas() {
-        return (ArrayList<personas>) personasRepository.findAll();
+    public ArrayList<Personas> getPersonas() {
+        return (ArrayList<Personas>) personasRepository.findAll();
     }
 
-    public personas insertPersona(personas persona) {
+    public Personas insertPersona(Personas persona) {
         return personasRepository.save(pokemon);
     }
     
