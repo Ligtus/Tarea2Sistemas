@@ -19,8 +19,8 @@ public class HolaMundo {
        return "Adios amigo";
    }
 
-   @RequestMapping("/contar")
-   public String contar(@RequestParam String word){
+   @RequestMapping("/contar/{word}")
+   public String contar(@PathVariable String word){
        return Functions.countLetters(word);
    }
 

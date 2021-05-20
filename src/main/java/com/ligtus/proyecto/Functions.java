@@ -6,6 +6,7 @@ public class Functions{
         String vowels = "aeiou";
         boolean isVow = false;
         for (int i = 0; i < word.length(); i++) {
+            isVow = false;
             for (int j = 0; j < vowels.length(); j++) {
                 if (Character.toLowerCase(word.charAt(i)) == vowels.charAt(j)) {
                     vow++;
