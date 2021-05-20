@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.ligtus.proyecto.Functions;
 import java.util.Map;
+import com.ligtus.proyecto.models.*;
+import com.ligtus.proyecto.services.*;
 
  
 @RestController

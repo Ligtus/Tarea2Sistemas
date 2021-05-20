@@ -2,8 +2,8 @@ package com.ligtus.proyecto.services;
 
 import java.util.ArrayList;
 
-import com.ligtus.proyecto.models.personas;
-import com.ligtus.proyecto.models.personasRepository;
+import com.ligtus.proyecto.models.Personas;
+import com.ligtus.proyecto.models.PersonasRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
