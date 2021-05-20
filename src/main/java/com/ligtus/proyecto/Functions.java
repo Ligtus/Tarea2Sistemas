@@ -2,17 +2,23 @@ package com.ligtus.proyecto;
 
 public class Functions{
     public static String countLetters(String word){
-        int lower=0, upper=0;
-
+        int vow=0, cons=0;
+        String vowels = "aeiou";
+        boolean isVow = false;
         for (int i = 0; i < word.length(); i++) {
-            if (Character.isUpperCase(word.charAt(i))) {
-                upper++;
-            } else if (Character.isLowerCase(word.charAt(i))){
-                lower++;
+            for (int j = 0; j < vowels.length(); j++) {
+                if (Character.toLowerCase(word.charAt(i)) == vowels.charAt(j)) {
+                    vow++;
+                    isVow = true;
+                    break;
+                }
+            }
+            if (!isVow) {
+                cons++;
             }
         }
 
-        return word + " tiene " + lower + " minúsculas y " + upper + " mayúsculas.";
+        return word + " tiene " + vow + " vocales y " + cons + " consonantes.";
     }
 
     public static String alternateCaps(String text) {

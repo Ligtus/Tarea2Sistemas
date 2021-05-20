@@ -24,7 +24,7 @@ public class HolaMundo {
        return Functions.countLetters(word);
    }
 
-   @GetMapping("/alternarcaps/{word}")
+   @GetMapping("/{word}")
     public String alternarcaps(@PathVariable String word) {
         return Functions.alternateCaps(word);
     }
