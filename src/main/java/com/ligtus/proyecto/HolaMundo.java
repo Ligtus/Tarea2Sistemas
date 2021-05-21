@@ -44,7 +44,7 @@ public class HolaMundo {
         persona.setNombre(datos.get("nombre"));
         persona.setApellidos(datos.get("apellidos"));
         persona.setEdad(Integer.parseInt(datos.get("edad")));
-        personasBDservice.insertarPersona(persona);
+        personasBDservice.insertPersona(persona);
     }
 
     @GetMapping("/listar")

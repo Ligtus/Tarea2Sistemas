@@ -4,5 +4,5 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface PersonasRepository extends CrudRepository<personas, Long> {
+public interface PersonasRepository extends CrudRepository<Personas, Long> {
 }

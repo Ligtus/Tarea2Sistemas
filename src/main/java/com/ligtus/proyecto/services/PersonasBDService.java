@@ -18,7 +18,7 @@ public class PersonasBDService {
     }
 
     public Personas insertPersona(Personas persona) {
-        return personasRepository.save(pokemon);
+        return personasRepository.save(persona);
     }
     
 }
