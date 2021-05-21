@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.ligtus.proyecto.Functions;
 import java.util.Map;
 import com.ligtus.proyecto.models.*;
@@ -38,7 +39,7 @@ public class HolaMundo {
     }
 
     @GetMapping("/guarda")
-    public String insertarPersona(@RequestMapping Map<String, String> datos){
+    public String insertarPersona(@RequestParam Map<String, String> datos){
         System.out.println(datos.get("nombre") + " " + datos.get("apellidos") + " " + datos.get("edad"));
         Personas persona = new Personas();
         persona.setNombre(datos.get("nombre"));
