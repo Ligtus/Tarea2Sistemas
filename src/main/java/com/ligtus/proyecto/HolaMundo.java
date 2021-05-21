@@ -40,12 +40,12 @@ public class HolaMundo {
 
     @GetMapping("/guarda")
     public String insertarPersona(@RequestParam Map<String, String> datos){
-        System.out.println(datos.get("nombre") + " " + datos.get("apellidos") + " " + datos.get("edad"));
         Personas persona = new Personas();
         persona.setNombre(datos.get("nombre"));
         persona.setApellidos(datos.get("apellidos"));
         persona.setEdad(Integer.parseInt(datos.get("edad")));
         personasBDservice.insertPersona(persona);
+        return datos.get("nombre") + " " + datos.get("apellidos") + " " + datos.get("edad");
     }
 
     @GetMapping("/listar")
