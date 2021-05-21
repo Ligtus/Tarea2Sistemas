@@ -1,14 +1,14 @@
 package com.ligtus.proyecto.models;
 
 import java.util.Date;
-import java.persistence.Column;
-import java.persistence.Entity;
-import java.persistence.GeneratedValue;
-import java.persistence.GenerationType;
-import java.persistence.Id;
-import java.persistence.Table;
-import java.persistence.Temporal;
-import java.persistence.TemporalType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
     
     @Entity
     @Table(name = "personas")
