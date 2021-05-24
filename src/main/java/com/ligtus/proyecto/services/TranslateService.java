@@ -4,11 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-public class Translation {
-    public String responseData;
-}
-
-public class TranslationData{
+class TranslationData{
     public ArrayList<String> resultado = new ArrayList<String>();
 }
 
