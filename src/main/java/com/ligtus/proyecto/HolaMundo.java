@@ -18,6 +18,9 @@ public class HolaMundo {
    @Autowired
    PersonasBDService personasBDservice;
 
+   @AutoWired
+   TranslateService translateService;
+
    @RequestMapping("/")
    public String saludar(){
        return "Esta es tu primera página web backend";
@@ -51,5 +54,10 @@ public class HolaMundo {
     @GetMapping("/listar")
     public String mostrarPersonas(){
         return personasBDservice.getPersonas().toString();
+    }
+
+    @GetMapping("/traduce/{text}")
+    public String traducirTexto(@PathVariable String text){
+        return translateService.translate(text);
     }
 }
