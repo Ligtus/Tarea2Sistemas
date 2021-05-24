@@ -18,7 +18,7 @@ public class TranslateService {
     public String translate(String text) {
         String url = "https://api.mymemory.translated.net/get?q=" + text + "&langpair=es|en";
         TranslationData json = restTemplate.getForObject(url, TranslationData.class);   
-        return json.responseData.get(0).translatedText;
+        return json.resultado.get(0).translatedText;
     }
 
 }
