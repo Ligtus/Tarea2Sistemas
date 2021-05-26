@@ -20,7 +20,7 @@ public class HolaMundo {
    @Autowired
    PersonasBDService personasBDservice;
 
-   @AutoWired
+   @Autowired
    TranslateService translateService;
 
    @RequestMapping("/")

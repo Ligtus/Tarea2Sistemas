@@ -5,8 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-class TranslationData{
-    public ArrayList<String> resultado = new ArrayList<String>();
+class ResponseData{
+    public String translatedText;
+}
+
+class Response{
+    public ResponseData responseData;
+    
 }
 
 @Service
@@ -17,8 +22,8 @@ public class TranslateService {
 
     public String translate(String text) {
         String url = "https://api.mymemory.translated.net/get?q=" + text + "&langpair=es|en";
-        TranslationData json = restTemplate.getForObject(url, TranslationData.class);   
-        return json.resultado.get(0).translatedText;
+        Response json = restTemplate.getForObject(url, Response.class);   
+        return json.responseData.translatedText;
     }
 
 }
